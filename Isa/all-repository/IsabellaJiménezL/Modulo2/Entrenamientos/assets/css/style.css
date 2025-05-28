@@ -1,0 +1,126 @@
+/* En este  archivo encontramos todos los estilos principales que 
+permiten que la pagina web My portfolio se vea de esa manera,
+incluye el diseño general, los colores, la tipografia y todo 
+lo necesario para que las cosas esten ubicadas donde les
+corresponde*/
+
+/*La fuente que se utiliza en la pagina web*/
+*{
+    font-family:'Nunito Sans','sans-serif';
+}
+/* La imagen que se utiliza en el fondo de la pagina web, un poco borrosa para que no distraiga*/
+body {
+    background-image:url('../img/fondo.jpg');
+    backdrop-filter: blur(2px); 
+    
+}
+/* El contenedor color crema que almacena toda la informacion de la pagina web */
+.page{
+    padding: 20px;
+    background-color: rgb(250,242,228);
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+/* La asignación de colores para el titulo y los subtitulos*/
+#title{
+    color: rgb(156, 30, 30);
+}
+#title b{ 
+    color: rgb(132, 184, 77);
+}
+h1{
+    text-align: center;
+}
+h2{
+    color: rgb(209, 47, 47);
+}
+h3{
+    color: rgb(132, 184, 77);
+}
+h3 b{
+    color: rgb(156, 30, 30);
+}
+h2{
+    text-align: center;
+}
+/* Se configura el espacio del menu y
+su contenido para que se vea ordenado*/
+ul.menu{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0px 60px 0px 0px;
+    text-align: center;
+}
+li.item-menu{
+    margin: 0px 60px 0px 0px;
+    text-align:center;
+}
+/* Se configura el espacio de la imagen,
+su tamaño, la forma y el color de su
+contenedor*/
+section img{
+    border-radius: 30px;
+}
+.image {
+    display: flex;
+    width: 100%;
+    max-width: 100vw;
+}
+.box-content {
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+.box-content-image {
+    margin: 15px;
+    padding: 15px;
+    border-radius: 30px;
+    justify-content: center;
+}
+.box-content-image img {
+    background-color: rgba(132, 184, 77, 0.4);
+    padding: 10px;
+}
+#project-images{
+    text-align: center;   
+    color: rgb(156, 30, 30);
+}
+div.code-images{
+    display: flex;
+    padding: 20px 10px;
+    justify-content: center;
+    background-color: rgba(132, 184, 77, 0.4);
+    border-radius: 40px;
+    width: 500px;
+    margin:auto;
+}
+/* Se configura la tabla de los proyectos, el espacio
+de cada elemento, el color, el grosor del borde y su ubicación*/
+table{
+    display: flex;
+    justify-content: center;
+}
+th, td{
+    border:2px solid rgb(132, 184, 77);
+    padding: 15px;
+    }
+td.link, a{
+    color: green;
+}
+/* Se configuran los modulos de contacto,
+el color, tamaño y ubicacion.*/
+form input,form textarea, input{
+    display: flex;
+    width: 50%;
+    padding: 10px 10px;
+    margin-bottom: 10px;
+    border: 1.5px solid rgb(132, 184, 77);
+    border-radius: 4px;
+    }
+/* Se selecciona el color de la cita al pie de pagina */
+cite{
+    color: rgb(156, 30, 30);
+}
