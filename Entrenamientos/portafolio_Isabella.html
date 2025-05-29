@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--Se importan las fuentes y todo lo hecho en el archivo .css-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="shortcut icon" href="assets/img/Icon-web.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<!--Este es el cuerpo de la pagina web, todo lo que se haga aqui se vera en la web-->
+<body>
+    <div class="page">
+        <header>
+            <!--El titulo de la pagina y el menu de busqueda-->
+            <h1 id="title"> <b>☆</b> Isabella Jiménez Lázaro <b>-</b> Riwi Developer <b>☆</b></h1>
+
+            <div>
+                <nav>
+                    <a href="#Contact">Contact me</a>
+                    <a href="#About-me">Get to know me</a>
+                    <a href="#Projects">My projects</a>
+                </nav>
+            </div>
+        </header>
+
+
+        <!--El subtitulo y una pequeña descripcion de quien soy-->
+        <section id="about-me">
+            <h2>About Me</h2>
+                    <p>
+                    Hello, my name
+                    is Isabella and I think of myself as a creative person who enjoy lots of ways of art.<br>
+                    I love animated productions like cartoons or movies, and funny pretty thinks. <br>Right now I'm so excited
+                    to be learning HTML,
+                    like I said above I enjoy creating thinks, even more so if they are visually pretty.
+                    I also enjoied learning PYTHON, even though it was challenging.
+                    <br>I'm so delighted with what I'm learning here at Riwi,
+                    and I hope to make the most out of it.
+                    </p>
+        </section>
+
+
+        <!--Un contenedor con mi imagen y un par de caracteristicas y cualidades.-->
+        <div class="image">
+            <div class="box-content box-content-image">
+                <img src="assets/img/img-perfil.jpg" alt="Isabella's photo" width="300">
+            </div>
+            <section class="block-flex box-content">
+                <h3>Skills</h3>
+                <ul class="skills">
+                    <li>Responsible</li>
+                    <li>Creative</li>
+                    <li>Patiente</li>
+                    <li>Recursive</li>
+                    <li>Leadership</li>
+                    <li>Teamwork</li>
+                    <li>Advanced english</li>
+                    <li>Intermediate french</li>
+                </ul>
+            </section>
+        </div>
+
+
+        <!--Los proyectos realizados junto con una pequeña descripción-->
+        <section id="projects">
+            <h2>My Projects</h2>
+            <h3>Project 1 <b>:</b> Product validation system <b>.</b></h3>
+            <p>Develop a program that demonstrates your ability to apply basic data entry concepts, data types, and
+                operators in Python.</p>
+            <h3>Project 2 <b>:</b> Ratings and Statistics Challenge <b>.</b></h3>
+            <p>Develop a Python program that manages a series of ratings and statistics interactively.</p>
+            <h3>Project 3 <b>:</b> Inventory management with functions and collections <b>.</b></h3>
+            <p>Develop a Python program that efficiently manages a store's product inventory by applying parameterized
+                functions, lambda functions, and data structures such as lists, tuples, and dictionaries.</p>
+            <h3>Project 4 <b>:</b> My first portfolio <b>.</b></h3>
+            <p>In this project I built my firs portfolio only using HTML.</p>
+        </section>
+
+
+        <!--La imagen de la interfaz de uno de los proyectos mencionados en el punto anterior-->
+        <section class="projects images">
+            <h3 id="project-images">Project Image</h3>
+            <div class="code-images" >
+                <img src="assets/img/project2.png" alt="A project photo" width="475" title="Project 2">
+            </div>
+        </section>
+
+        <!--La tabla que contiene los proyectos con un link que deberia llevar a ellos-->
+        <h2>Projects Table</h2>
+        <table>
+            <tr>
+                <th>Project Name</th>
+                <th>Technologies Used</th>
+                <th>Link</th>
+            </tr>   
+            <tr>
+                <td>Product validation system </td>
+                <td>Python</td>
+                <td><a href="#">View Project</a></td>
+            </tr>
+
+            <tr>
+                <td>Ratings and Statistics Challenge</td>
+                <td>Python</td>
+                <td class="link"><a href="#">View Project</a></td>
+            </tr>
+
+            <tr>
+                <td>Inventory management</td>
+                <td>Python</td>
+                <td><a href="#">View Project</a></td>
+            </tr>
+
+            <tr>
+                <td>My first portfolio</td>
+                <td>Html</td>
+                <td><a href="#">View Project</a></td>
+            </tr>
+        </table>
+
+
+        <!--La seccion en la que se pueden poner en contacto conmigo enviando su nombre, correo y mensaje-->
+        <section id="Contact">
+            <h2>Get in touch with me</h2>
+            <form action="/send" method="post">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your name.">
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email.">
+
+                <label for="message">Message</label>
+                <textarea name="message" id="message" rows="5" required
+                    placeholder="Something to say? Put it here."></textarea>
+
+                <input type="submit" value="send">
+            </form>
+        </section>
+
+
+        <!--Una pequeña lista a mis redes sociales-->
+        <h2>Social Media</h2>
+        <ul class="social-media">
+            <li><a href="https://github.com/Luciel1811" target="_blank">GitHub</a></li>
+            <li><a href="https://www.youtube.com/@isabellajimenezlazaro8014" target="_blank">YouTube</a></li>      
+        </ul>
+        <hr>
+
+        <!--El pie de pagina-->
+        <footer>
+            <cite>☆Thanks for visiting my portfolio~</cite>
+        </footer>
+    </div>
+</body>
+
+</html>
