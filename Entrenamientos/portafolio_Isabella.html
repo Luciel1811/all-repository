@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!--Se importan las fuentes y todo lo hecho en el archivo .css-->
+<!--Fonts and everything done in the file.css are imported-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,29 +16,29 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
-<!--Este es el cuerpo de la pagina web, todo lo que se haga aqui se vera en la web-->
+<!--This is the body of the web page, everything done here will be seen on the web.-->
 <body>
     <div class="page">
         <header>
-            <!--El titulo de la pagina y el menu de busqueda-->
-            <h1 id="title"> <b>☆</b> Isabella Jiménez Lázaro <b>-</b> Riwi Developer <b>☆</b></h1>
-
+            <!--The page title and the search menu-->
             <div>
-                <nav>
+                <nav class="links" style="--items:3;">
                     <a href="#Contact">Contact me</a>
-                    <a href="#About-me">Get to know me</a>
-                    <a href="#Projects">My projects</a>
+                    <a href="#about-me">Get to know me</a>
+                    <a href="#projects">My projects</a>
+                    <span class="line"></span>
                 </nav>
             </div>
+            <h1 id="title"> <b>☆</b> Isabella Jiménez Lázaro <b>-</b> Riwi Developer <b>☆</b></h1>
         </header>
 
 
-        <!--El subtitulo y una pequeña descripcion de quien soy-->
+        <!--The subtitle and a short description of who I am-->
         <section id="about-me">
             <h2>About Me</h2>
                     <p>
                     Hello, my name
-                    is Isabella and I think of myself as a creative person who enjoy lots of ways of art.<br>
+                    is Isabella Jiménez Lázaro and I think of myself as a creative person who enjoy lots of ways of art.<br>
                     I love animated productions like cartoons or movies, and funny pretty thinks. <br>Right now I'm so excited
                     to be learning HTML,
                     like I said above I enjoy creating thinks, even more so if they are visually pretty.
@@ -49,13 +49,13 @@
         </section>
 
 
-        <!--Un contenedor con mi imagen y un par de caracteristicas y cualidades.-->
+        <!--A container with my image and a couple of characteristics and qualities.-->
         <div class="image">
             <div class="box-content box-content-image">
                 <img src="assets/img/img-perfil.jpg" alt="Isabella's photo" width="300">
             </div>
             <section class="block-flex box-content">
-                <h3>Skills</h3>
+                <h3 class="skills-title">Skills</h3>
                 <ul class="skills">
                     <li>Responsible</li>
                     <li>Creative</li>
@@ -70,7 +70,7 @@
         </div>
 
 
-        <!--Los proyectos realizados junto con una pequeña descripción-->
+        <!--The projects carried out together with a brief description-->
         <section id="projects">
             <h2>My Projects</h2>
             <h3>Project 1 <b>:</b> Product validation system <b>.</b></h3>
@@ -86,7 +86,7 @@
         </section>
 
 
-        <!--La imagen de la interfaz de uno de los proyectos mencionados en el punto anterior-->
+        <!--The image of the interface of one of the projects mentioned in the previous point-->
         <section class="projects images">
             <h3 id="project-images">Project Image</h3>
             <div class="code-images" >
@@ -94,7 +94,7 @@
             </div>
         </section>
 
-        <!--La tabla que contiene los proyectos con un link que deberia llevar a ellos-->
+        <!--The table containing the projects with a link that should lead to them-->
         <h2>Projects Table</h2>
         <table>
             <tr>
@@ -128,7 +128,7 @@
         </table>
 
 
-        <!--La seccion en la que se pueden poner en contacto conmigo enviando su nombre, correo y mensaje-->
+        <!--The section where you can contact me by sending your name, email and message-->
         <section id="Contact">
             <h2>Get in touch with me</h2>
             <form action="/send" method="post">
@@ -147,15 +147,15 @@
         </section>
 
 
-        <!--Una pequeña lista a mis redes sociales-->
+        <!--The area where you can find my social networks-->
         <h2>Social Media</h2>
-        <ul class="social-media">
-            <li><a href="https://github.com/Luciel1811" target="_blank">GitHub</a></li>
-            <li><a href="https://www.youtube.com/@isabellajimenezlazaro8014" target="_blank">YouTube</a></li>      
-        </ul>
+        <div class="social-media">
+            <a href="https://github.com/Luciel1811"><img id="git" src="assets/img/git-icon-hover.png" alt="github icon" ></a>
+            <a href="https://www.youtube.com/@isabellajimenezlazaro8014"><img id="youtube" src="assets/img/youtube-icon-hover.png" alt="youtube icon"></a>
+        </div>
         <hr>
 
-        <!--El pie de pagina-->
+        <!--The footer-->
         <footer>
             <cite>☆Thanks for visiting my portfolio~</cite>
         </footer>

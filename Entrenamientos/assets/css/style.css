@@ -1,33 +1,32 @@
-/* En este  archivo encontramos todos los estilos principales que 
-permiten que la pagina web My portfolio se vea de esa manera,
-incluye el diseño general, los colores, la tipografia y todo 
-lo necesario para que las cosas esten ubicadas donde les
-corresponde*/
+/* In this file, we find all the main styles that allow the My Portfolio 
+website to look the way it does.This includes the general layout, colors, 
+typography, and everything else necessary to ensure everything is located 
+where it belongs.*/
 
-/*La fuente que se utiliza en la pagina web*/
+/*The font used on the website*/
 *{
     font-family:'Nunito Sans','sans-serif';
 }
-/* La imagen que se utiliza en el fondo de la pagina web, un poco borrosa para que no distraiga*/
+/* The image used in the background of the web page*/
 body {
     background-image:url('../img/fondo.jpg');
-    backdrop-filter: blur(2px); 
-    
+    backdrop-filter: blur(2px);
+
 }
-/* El contenedor color crema que almacena toda la informacion de la pagina web */
+/* The cream-colored container that stores all the information on the website */
 .page{
     padding: 20px;
     background-color: rgb(250,242,228);
     margin: 20px auto;
-    max-width: 800px;
+    max-width: 65%;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-/* La asignación de colores para el titulo y los subtitulos*/
+/* Color assignment for the title and subtitles*/
 #title{
     color: rgb(156, 30, 30);
 }
-#title b{ 
+#title b{
     color: rgb(132, 184, 77);
 }
 h1{
@@ -45,29 +44,70 @@ h3 b{
 h2{
     text-align: center;
 }
-/* Se configura el espacio del menu y
-su contenido para que se vea ordenado*/
-nav{
-    list-style: none;
-    display: flex;
-    flex-direction:row-reverse;
-    text-align: center;
-    margin: 0px;
-    padding: 0px;
-    justify-content: space-evenly;
+/* Configure the menu bar, its content, and animations*/
+.links{
+	background-color: rgb(250,242,228);
+	border-bottom: 1px solid rgba(132, 184, 77);
+	font-size: 2em;
+	font-weight: 300;
 }
-nav a{
-    text-decoration: none;
+.links a{
+	color: rgb(132, 184, 77);
+	padding: .75em;
+	text-align: center;
+	text-decoration: none;
+	transition: all .5s;
 }
+.links a:hover{
+	background: rgba(132, 184, 77, 0.2);
+	color: rgb(156, 30, 30);
+}
+.links .line{
+	background: rgb(156, 30, 30);
+	height: 2px;
+	pointer-events: none;
+}
+#header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+.links{
+	display: grid;
+	grid-template-columns: repeat(var(--items), 1fr);
+	position: relative;
+}
+.links .line{
+	opacity: 0;
+	transition: all .5s;
+	position: absolute;
+	bottom: 0;
+	left: var(--left, calc(100% / var(--items) * (var(--index) - 1)));
+	width: var(--width, calc(100% / var(--items)));
+	--index: 0;
+}
+/* Thanks to this code fragment, the line 
+runs through the menu. */
+.links a:hover ~ .line {
+	opacity: 1;
+}
+.links > a:nth-of-type(1):hover ~ .line { --index: 1; }
+.links > a:nth-of-type(2):hover ~ .line { --index: 2; }
+.links > a:nth-of-type(3):hover ~ .line { --index: 3; }
+
+/* the description text is located */
 section#about-me p{
     display: flex;
     margin: 16px 0px 16px 45px;
 }
-/* Se configura el espacio de la imagen,
-su tamaño, la forma y el color de su
-contenedor*/
+/* The image and skills list space, size, shape
+and color of its container are configured.*/
 section img{
     border-radius: 30px;
+}
+.box-content.box-content-image img{
+    width: 55%;
 }
 .image{
     display: flex;
@@ -76,11 +116,18 @@ section img{
     justify-content: space-evenly
 }
 .box-content {
-    /* width: 50%; */
+    width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 50px 40px 0px -20px;
+    padding: 0px 40px 0px 0px;
+}
+.skills-title{
+    margin-top: 15%;
+    margin-right: 25%;
+}
+ul.skills{
+    margin-right: 20%;
 }
 .box-content-image {
     margin: 15px;
@@ -91,14 +138,15 @@ section img{
 .box-content-image img {
     background-color: rgba(132, 184, 77, 0.4);
     padding: 15px;
-    border-radius: 30px;
+    border-radius: 40px;
 }
+/* The image and text space, size, shape
+ and color of its container are configured. */
 #project-images{
-    text-align: center;   
+    text-align: center;
     color: rgb(156, 30, 30);
 }
 section#projects{
-    /* display: flex; */
     margin: 16px 0px 16px 45px;
 }
 div.code-images{
@@ -107,19 +155,14 @@ div.code-images{
     justify-content: center;
     background-color: rgba(132, 184, 77, 0.4);
     border-radius: 40px;
-    width: 500px;
+    width: 40%;
     margin:auto;
 }
-/* article.block-flex.box-content h3{
-    display: flex;
-    flex-direction: column;
-    
-} */
-/* article ul.skills li{ */
-    /* color: green; */
-/* } */
-/* Se configura la tabla de los proyectos, el espacio
-de cada elemento, el color, el grosor del borde y su ubicación*/
+div.code-images img{
+    width: 100%;
+}
+/* The project table, the space for each element, the color,
+the border thickness, and its location are configured.*/
 table{
     display: flex;
     justify-content: center;
@@ -131,8 +174,8 @@ th, td{
 td.link, a{
     color: green;
 }
-/* Se configuran los modulos de contacto,
-el color, tamaño y ubicacion.*/
+/* The contact modules are configured, 
+including color, size, and location.*/
 form{
     display: flex;
     flex-direction: column;
@@ -145,7 +188,26 @@ form input,form textarea, input{
     border: 1.5px solid rgb(132, 184, 77);
     border-radius: 4px;
     }
-/* Se selecciona el color de la cita al pie de pagina */
+/* social media icons space */
+.social-media{
+    display: flex;
+    margin-left: 40%;
+    max-width: 25%;
+}
+div.social-media a img{
+    display: flex;
+    width: 55%;
+    transition: all 0.8s ease;
+}
+a img#git:hover{
+    filter: grayscale(1);
+    transition: all 0.6s ease;
+}
+a img#youtube:hover{
+    filter: grayscale(1);
+    transition: all 0.6s ease;
+}
+/* The color of the footnote quote is selected.*/
 cite{
     color: rgb(156, 30, 30);
 }
